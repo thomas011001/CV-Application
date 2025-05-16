@@ -46,6 +46,12 @@
   gap: 20px;
 }
 
+@media (max-width: 640px) {
+  .form-flex {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
 .form-flex label {
   display: flex;
   flex-direction: column;
@@ -53,7 +59,8 @@
   font-size: large;
 }
 
-.form-flex label input {
+.form-flex label input,
+.form-flex label textarea {
   padding: 20px;
   width: 100%;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
@@ -121,4 +128,8 @@
 
 .options .option:hover {
   transform: translateX(-80px);
+}
+
+.option.none {
+  display: none;
 }
